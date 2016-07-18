@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.secret_key = "super secret key"
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-UPLOAD_FOLDER = '/var/www/csvuploadfolder'
+UPLOAD_FOLDER = '/var/www/csvuploadfolder/'
 ALLOWED_EXTENSIONS = set(['csv'])
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
