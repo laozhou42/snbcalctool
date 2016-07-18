@@ -1,0 +1,20 @@
+{
+  "name": "toromatch",
+  "version": "0.0.1",
+  "authors": [
+    "zhouyi <zhouyi@stockpalm.com>",
+    "chenpeng <chenpeng@stockpalm.com>"
+  ],
+  "dependencies": {
+    "react": "^15.2.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "analytics": false
+}
