@@ -76,7 +76,7 @@ def import_record_to_snb():
 				try:
 						os.remove(file_path)
 				except OSError:
-						print u'服务器上没有该文件'
+						print "Error:" + filename + ", this file dosen't exist"
 						success = False
 		return json.dumps({"success": success})
 
