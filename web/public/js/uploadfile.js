@@ -39,7 +39,7 @@ $(function(){
       data: formData,
       success: function(data){
         alert('file upload success');
-        console.log(data);
+        console.log(data.filename);
       },
       error: function(xhr, status, err) {
         alert('File upload failed, Server error');
