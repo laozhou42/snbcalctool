@@ -4,6 +4,8 @@ from flask.ext.cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 import network
 import account_setting
+import time
+
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -47,9 +49,10 @@ def upload_csvfile():
 						flash('No selected file')
 						return json.dumps({"success": 'false', "message": "No selected file"})
 				if file and allowed_file(file.filename):
-						filename = secure_filename(file.filename)
+						timestamp = time.mktime(time.localtime())
+						filename = "csv_" + str(timestamp)
 						file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-						return json.dumps({"success": 'true'})
+						return json.dumps({"success": 'true', "filename": filename})
 		return json.dumps({"success": 'false'})
 
 

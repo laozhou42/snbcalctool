@@ -24,7 +24,6 @@ $(function(){
     for (var i = 0; i < files.length; i++) {
       var fd = new FormData();
       fd.append('file', files[i]);
-
       sendFileToServer(fd,status);
     }
   }
@@ -39,8 +38,11 @@ $(function(){
       cache: false,
       data: formData,
       success: function(data){
-        alert('done');
+        alert('file upload success');
         console.log(data);
+      },
+      error: function(xhr, status, err) {
+        alert('File upload failed, Server error');
       }
     });
   }

@@ -29,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="snbcalc.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/snbcalc.py">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17332584">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.56949914">
+              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -41,15 +41,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="gl.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/snbcalc.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/snbcalc.py" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -375,10 +383,26 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/snbcalc.py">
+    <entry file="file://$PROJECT_DIR$/gl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17332584">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///anaconda/lib/python2.7/site-packages/werkzeug/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29713">
+          <caret line="252" column="4" selection-start-line="252" selection-start-column="4" selection-end-line="252" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56949914">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
