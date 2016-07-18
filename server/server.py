@@ -49,8 +49,8 @@ def upload_csvfile():
 						flash('No selected file')
 						return json.dumps({"success": 'false', "message": "No selected file"})
 				if file and allowed_file(file.filename):
-						timestamp = time.mktime(time.localtime())
-						filename = "csv_" + str(timestamp)
+						timestamp = int(time.mktime(time.localtime()))
+						filename = "csv_" + str(timestamp) + ".csv"
 						file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 						return json.dumps({"success": 'true', "filename": filename})
 		return json.dumps({"success": 'false'})
