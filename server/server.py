@@ -7,6 +7,7 @@ import time
 import csv_file_parser
 import service
 import gl
+import thread
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -33,10 +34,6 @@ def login():
 				success = 'true'
 		else:
 				success = 'false'
-		gl.group_id = service.get_xueqiu_group_id()
-		service.set_group_amount(gl.group_id, '1000000.00')
-		records_list = service.get_before_records_list(gl.group_id)
-		service.clear_befor_records(gl.group_id, records_list)
 		return {"success": success}
 
 
@@ -65,6 +62,10 @@ def upload_csvfile():
 @app.route('/snbcalc/importrecordtosnb', methods=['POST'])
 @cross_origin()
 def import_record_to_snb():
+		gl.group_id = service.get_xueqiu_group_id()
+		service.set_group_amount(gl.group_id, '1000000.00')
+		records_list = service.get_before_records_list(gl.group_id)
+		service.clear_befor_records(gl.group_id, records_list)
 		filename = request.form["filename"]
 		file_path = UPLOAD_FOLDER + filename
 		trades = csv_file_parser.parse_csv_file_from_trade_order(file_path)
