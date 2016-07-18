@@ -68,8 +68,6 @@ def import_record_to_snb():
 		filename = request.form["filename"]
 		file_path = UPLOAD_FOLDER + filename
 		trades = csv_file_parser.parse_csv_file_from_trade_order(file_path)
-		for trade in trades:
-				print trade.get('code')
 		if service.add_trans_records_to_xueqiu(group_id, trades):
 				success = True
 		else:

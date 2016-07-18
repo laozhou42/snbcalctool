@@ -63,7 +63,7 @@ $(function(){
       data: data,
       success: function(data) {
         if (data.success) {
-          alert('import success');
+          window.open("https://xueqiu.com/performance");
         } else {
           alert('import failed');
         }
