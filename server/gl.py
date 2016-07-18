@@ -5,3 +5,5 @@
 import requests
 
 gl_session = requests.Session()
+
+group_id = str()

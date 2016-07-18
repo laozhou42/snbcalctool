@@ -39,11 +39,39 @@ $(function(){
       data: formData,
       success: function(data){
         alert('file upload success');
-        console.log(data.filename);
+        var respObj = JSON.parse(data);
+        if (respObj.success){
+          requestRecordsToXueqiu(respObj.filename);
+        }else{
+          alert(respObj.message);
+        }
       },
       error: function(xhr, status, err) {
         alert('File upload failed, Server error');
       }
     });
+  }
+
+  function requestRecordsToXueqiu(filename) {
+    var data = {
+      'filename': filename
+    };
+    $.ajax({
+      url: import_to_snb_url,
+      dataType: 'json',
+      type: 'POST',
+      data: data,
+      success: function(data) {
+        if (data.success) {
+          alert('import success');
+        } else {
+          alert('import failed');
+        }
+      },
+      error: function(xhr, status, err) {
+        alert('服务器错误');
+      }
+    });
+  },
   }
 })

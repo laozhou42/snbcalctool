@@ -30,8 +30,17 @@ def clear_befor_records(m_group_id, m_records_list):
 
 def add_trans_records_to_xueqiu(m_group_id, trades):
 		for trade in trades:
-				network.add_action('1', trade.get('op'), trade.get('commission_rate'), trade.get('tax_rate'))
-				network.add_stock(trade.get('symbol'))
-				network.add_trans('1', trade.get('date'), trade.get('symbol'), m_group_id, trade.get('price'),
+				add_action_success = network.add_action('1', trade.get('op'), trade.get('commission_rate'), trade.get('tax_rate'))
+				add_stock_success = network.add_stock(trade.get('symbol'))
+				add_trans_success = network.add_trans('1', trade.get('date'), trade.get('symbol'), m_group_id, trade.get('price'),
 													trade.get('volume'), trade.get('commission_rate'), trade.get('tax_rate'))
-		print '交易记录已全部添加成功...'
+				if add_action_success and add_stock_success and add_trans_success:
+						return True
+				else:
+						if not add_action_success:
+								print ("Add_Action环节出错")
+						elif not add_stock_success:
+								print ("Add_Stock环节出错")
+						elif not add_trans_success:
+								print ("Add_Trans环节出错")
+						return False

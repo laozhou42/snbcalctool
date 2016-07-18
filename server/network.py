@@ -57,7 +57,10 @@ def del_before_record(m_group_id, record):
 		resp_obj = json.loads(del_record_request.text)
 		if not resp_obj.get('success'):
 				print '删除' + symbol_str + '此股票交易记录失败,程序结束...'
-				exit()
+				success = False
+		else:
+				success = True
+		return success
 
 
 def add_action(stock_type, m_op, m_commission_rate, m_tax_rate):
@@ -73,7 +76,10 @@ def add_action(stock_type, m_op, m_commission_rate, m_tax_rate):
 		resp_obj = json.loads(add_action_request.text)
 		if not resp_obj.get('success'):
 				print '添加股票交易记录动作失败,程序结束...'
-				exit()
+				success = False
+		else:
+				success = True
+		return success
 
 
 def add_stock(m_symbol):
@@ -87,7 +93,10 @@ def add_stock(m_symbol):
 		resp_obj = json.loads(add_stock_request.text)
 		if not resp_obj.get('success'):
 				print '添加' + m_symbol + '此股票交易记录失败,程序结束...'
-				exit()
+				success = False
+		else:
+				success = True
+		return success
 
 
 def add_trans(stock_type, date_str, m_symbol, m_group_id, m_price, m_volume, m_commission_rate, m_tax_rate):
@@ -108,7 +117,10 @@ def add_trans(stock_type, date_str, m_symbol, m_group_id, m_price, m_volume, m_c
 		resp_obj = json.loads(add_trans_request.text)
 		if not resp_obj.get('success'):
 				print '添加' + m_symbol + '此股票交易失败,程序结束...'
-				exit()
+				success = False
+		else:
+				success = True
+		return success
 
 
 def set_amount(m_group_id, m_amount):
